@@ -9,20 +9,19 @@
 html, body {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 1em;
-    background-color: rgb(226, 225, 225);
-    height: 100vh;
-    width: 100vw;
+    background-color: rgb(150, 150, 150);
 
     display: flex;
     flex-flow: column;
     align-items: center;
+    overflow-x: hidden;
 }
 
 header {
-    background-color: lightgray;
+    background-color: rgba(255, 255, 255, 0.645);
     color: black;
     box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.486);
-    border-radius: 5px;
+    border-radius: 0px 0px 5px 5px;
     margin: 0px 20px;
     min-width: 95vw;
     max-width: 1000px;
@@ -32,15 +31,23 @@ header {
     gap: 10px;
 }
 
-header > h1 {
+div.nome {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 2.5em;
     color: black;
     text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.434);
     padding: 15px;
     align-self: center;
     border: 1px solid black;
     margin-top: 10px;
+}
+
+div.nome > h1 {
+    font-size: 4em;
+    text-align: center;
+}
+
+div.nome > h2 {
+    text-align: center;
 }
 
 nav.menu {
@@ -86,11 +93,14 @@ main {
     overflow: hidden;
 }
 
-main > section {
+section.corpo {
     margin: 10px;
+
+    display: flex;
+    flex-flow: column wrap;
 }
 
-main > section > h2 {
+section.corpo > h2 {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 1.8em;
     font-weight: bold;
@@ -102,7 +112,7 @@ main > section > h2 {
     text-align: center;
 }
 
-main > section > p {
+section.corpo > p {
     margin: 15px;
     padding: 3px;
     text-align: justify;
@@ -110,13 +120,47 @@ main > section > p {
     line-height: 1.5em;
 }
 
+div#sobre {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+}
+
+div#sobre > p {
+    margin: 15px;
+    padding: 3px;
+    text-align: justify;
+    text-indent: 30px;
+    line-height: 1.5em;
+}
+
+img#foto {
+    margin: auto;
+}
+
 footer {
-    font-size: 0.8em;
+    font-family: monospace;
+    font-size: 1em;
     text-align: center;
     background-color: rgb(90, 90, 90);
-    color: white;
+    color: rgb(255, 255, 255);
     padding: 3px;
-    margin: 0px 30px;
-    border-radius: 5px;
-    max-width: 800px;
+    width: 100%;
+}
+
+footer > a {
+    color: rgb(175, 255, 88);
+    text-decoration: none;
+    margin: 1px;
+}
+
+footer > a:hover {
+    font-family: monospace;
+    background-color: rgb(175, 255, 88);
+    color: rgb(91, 91, 91);
+    text-decoration: underline;
+    border-radius: 3px;
+    padding: 1px;
+    margin: 0px;
 }
